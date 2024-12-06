@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "debNumia",
+  "version": "1.0.1",
+  "description": "Por fin",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "unmail@gmail.com"
+    }
+  },
+
+  "icons": {
+    "48": "icons/debtech-48.png",
+    "96": "icons/debtech-96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.freshdesk.com/*", "*://*.debmedia.com/*"],
+      "js": ["ext.js"]
+    }
+  ],
+
+  "permissions": ["activeTab"],
+
+  "action": {
+    "default_icon": "icons/debtech-48.png",
+    "default_title": "debNumia",
+    "default_popup": "popup/main.html"
+  }
+}
